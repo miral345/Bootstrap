@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+  header {
+    background-image: url('assets/hero.jpg');
+
+  }
+
+  .navbar-brand {
+    color: rgb(224, 229, 235);
+  }
+
+  .nav-link {
+    color: white;
+  }
+
+  .custom-shape-divider-bottom-1781936596 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1781936596 svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 100px;
+  }
+
+  .custom-shape-divider-bottom-1781936596 .shape-fill {
+    fill: #FFFFFF;
+  }
+
+  .row {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  img {
+    padding-left: 5px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #0d6efd;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-size: 60%;
+  }
+
+  .contact-footer {
+    background: #0a0a0a;
+    color: #fff;
+    padding-top: 70px;
+  }
+
+  .contact-footer h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  .contact-footer .form-label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #ccc;
+  }
+
+  .contact-footer .form-control {
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    height: 38px;
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .contact-footer textarea.form-control {
+    height: auto;
+  }
+
+  .btn-submit {
+    background: #0d6efd;
+    border: none;
+    padding: 6px 24px;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #222;
+    margin: 50px 0;
+  }
+
+  .contact-icon img {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 10px;
+  }
+
+  .contact-icon p {
+    font-size: 13px;
+    margin: 0;
+    color: #ccc;
+  }
+
+  .footer-col h6 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .footer-col a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2.3;
+  }
+
+  .footer-col a:hover {
+    color: #fff;
+  }
+
+  .subscribe input {
+    height: 32px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .subscribe .btn {
+    height: 32px;
+    padding: 0 15px;
+    font-size: 12px;
+    background: #0d6efd;
+    border: none;
+  }
+
+  .bottom-bar {
+    border-top: 1px solid #222;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+
+  .bottom-bar p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+
+  .social-btn {
+    width: 28px;
+    height: 28px;
+    background: #0d6efd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+
+  .custom-shape-divider-top-1782200490 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1782200490 svg {
+    position: relative;
+    display: block;
+    width: calc(114% + 1.3px);
+    height: 93px;
+  }
+
+  .custom-shape-divider-top-1782200490 .shape-fill {
+    fill: #141414;
+  }
+
+  @media (max-width:550px) {
+    .video1 video {
+      width: 300px;
+    }
+
+    .video1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ==========================
+        CONTACT SECTION
+========================== */
+
+  .contact-section {
+    background: #000;
+    color: #fff;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+  .wave {
+    width: 100%;
+    line-height: 0;
+  }
+
+  .wave svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+  }
+
+  .contact-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+  .heading-line {
+    width: 170px;
+    height: 2px;
+    background: #6c757d;
+    margin: 15px auto 45px;
+  }
+
+  .contact-section label {
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+
+  .contact-section .form-control {
+    height: 48px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .contact-section textarea.form-control {
+    height: 140px;
+    resize: none;
+  }
+
+  .submit-btn {
+    background: #0d6efd;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+
+  .submit-btn:hover {
+    background: #0b5ed7;
+  }
+
+  .contact-icons {
+    margin-top: 70px;
+  }
+
+  .contact-icons .col-md-4 {
+    margin-bottom: 25px;
+  }
+
+  .icon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 18px;
+  }
+
+  .contact-icons p {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+  }
+
+
+  /* ==========================
+            FOOTER
+========================== */
+
+  .footer {
+    background: #26282b;
+    color: #fff;
+    margin-top: -71px;
+    
+  }
+
+  .footer h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer ul li a {
+    text-decoration: none;
+    color: #cfcfcf;
+    transition: .3s;
+  }
+
+  .footer ul li a:hover {
+    color: #0d6efd;
+    padding-left: 5px;
+  }
+
+  .footer p {
+    color: #cfcfcf;
+  }
+
+  .footer .form-control {
+    border-radius: 3px;
+    height: 45px;
+  }
+
+  .footer .btn {
+    border-radius: 3px;
+  }
+
+  .footer hr {
+    margin: 40px 0 20px;
+    border-color: #555;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom span {
+    color: #0d6efd;
+    font-weight: 600;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+    background: #0d6efd;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: .3s;
+  }
+
+  .social-icons a:hover {
+    transform: translateY(-4px);
+  }
+
+  .social-icons i {
+    font-size: 18px;
+  }
+
+
+  /* ==========================
+        RESPONSIVE
+========================== */
+
+  @media(max-width:991px) {
+
+    .contact-heading {
+      font-size: 30px;
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+  }
+
+  @media(max-width:768px) {
+
+
+
+    .contact-heading {
+      font-size: 28px;
+    }
+
+    .heading-line {
+      width: 130px;
+    }
+
+    .contact-icons {
+      margin-top: 45px;
+    }
+
+    .icon-img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .footer .input-group {
+      flex-direction: column;
+    }
+
+    .footer .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+  }
+
+  @media(max-width:576px) {
+
+    .contact-section {
+      padding: 0 12px 50px;
+    }
+
+    .contact-heading {
+      font-size: 24px;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
+
+    .footer {
+      padding: 40px 0 20px;
+    }
+
+    .footer h5 {
+      margin-top: 15px;
+    }
+
+    .footer-bottom p {
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+    }
+
+  }
+
+  .custom-shape-divider-top-1782541659 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1782541659 svg {
+    position: relative;
+    display: block;
+    width: calc(141% + 1.3px);
+    height: 135px;
+  }
+
+  .custom-shape-divider-top-1782541659 .shape-fill {
+    fill: #FFFFFF;
+  }
+</style>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container ">
+        <a class="navbar-brand" href="#">TechHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">signin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h1 class="fw-bold display-5 text-light ">we collects high <br> quality leads </h1>
+          <p class="text-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro accusamus libero ipsum ratione,
+            nobis rerum
+            nam earum incidunt laudantium cum doloremque, explicabo impedit.
+          </p>
+          <button type="button" class="btn btn-primary"
+            style="--bs-btn-padding-y: .30rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .90rem;">
+            Get started
+          </button>
+        </div>
+        <div class="col-lg-5 video1">
+          <video src="assets/tech animation.mp4"></video>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="custom-shape-divider-bottom-1781936596">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </header>
+  <section class="p-5 text-center">
+    <div class="container">
+      <div class="row">
+        <h1>What we do for<br> you business</h1>
+       <div class="col-lg-3">
+          <div class="card p-4 border-0" style="width: 18rem;">
+            <img src="/assets/phone.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">linking building</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of the card’s
+                content.</p>
+               <a href="#" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg></a>
+               
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card p-4 border-0" style="width: 18rem;">
+            <img src="assets/markiting.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">linking building</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of the card’s
+                content.</p>
+               <a href="#" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg></a>
+               
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card p-4 border-0" style="width: 18rem;">
+            <img src="assets/SEO.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">linking building</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                of the card’s
+                content.</p>
+              <a href="#" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-content-center">
+        <div class="col-lg-6 text-xl-center">
+          <img src="assets/mobile.gif" alt="" class="img-fluid">
+
+        </div>
+        <div class="col-lg-5">
+          <h1 class="fw-bold display-5 ">we collects high <br> quality leads </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro accusamus libero ipsum ratione,
+            nobis rerum
+            nam earum incidunt laudantium cum doloremque, explicabo impedit.
+          </p>
+          <button type="button" class="btn btn-primary"
+            style="--bs-btn-padding-y: .30rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .90rem;">
+            Get started
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-light">
+    <div class="container">
+      <!-- Heading -->
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h3 class="fw-bold mb-0">Generating New Customer Via<br>Online Mode</h3>
+        </div>
+      </div>
+
+      <!-- 2x2 Grid Cards -->
+      <div class="row g-3">
+        <!-- Card 1 -->
+        <div class="col-md-5">
+          <div class="d-flex align-items-start p-4 bg-white rounded shadow-sm h-100">
+            <img src="assets/SEO.gif" alt="icon" class="me-3" style="width: 60px; height: 60px; object-fit: contain;">
+            <div>
+              <h6 class="fw-bold mb-2">Social media advertising</h6>
+              <p class="mb-0 text-muted" style="font-size: 14px; line-height: 1.6;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alique ipsum sint explicabo modi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-5">
+          <div class="d-flex align-items-start p-4 bg-white rounded shadow-sm h-100">
+            <img src="assets/phone.gif" alt="icon" class="me-3" style="width: 60px; height: 60px; object-fit: contain;">
+            <div>
+              <h6 class="fw-bold mb-2">Social media advertising</h6>
+              <p class="mb-0 text-muted" style="font-size: 14px; line-height: 1.6;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alique ipsum sint explicabo modi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-5">
+          <div class="d-flex align-items-start p-4 bg-white rounded shadow-sm h-100">
+            <img src="assets/SEO.gif" alt="icon" class="me-3" style="width: 60px; height: 60px; object-fit: contain;">
+            <div>
+              <h6 class="fw-bold mb-2">Social media advertising</h6>
+              <p class="mb-0 text-muted" style="font-size: 14px; line-height: 1.6;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alique ipsum sint explicabo modi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-5">
+          <div class="d-flex align-items-start p-4 bg-white rounded shadow-sm h-100">
+            <img src="assets/phone.gif" alt="icon" class="me-3" style="width: 60px; height: 60px; object-fit: contain;">
+            <div>
+              <h6 class="fw-bold mb-2">Social media advertising</h6>
+              <p class="mb-0 text-muted" style="font-size: 14px; line-height: 1.6;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alique ipsum sint explicabo modi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-black">
+    <div class="container py-5 text-white">
+      <h2 class="text-center fw-bold display-5 mb-5">What Client Say About Us</h2>
+      <div id="testiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-lg-3">
+                <div class="card bg-secondary text-white border-0 h-100">
+                  <img src="assets/tech1.webp" class="card-img-top" alt="">
+                  <div class="card-body p-4">
+                    <h6 class="card-title fw-bold">Card title</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                    <div class="text-warning fs-5">★★★</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card bg-secondary text-white border-0 h-100">
+                  <img src="assets/tech2.webp" class="card-img-top" alt="">
+                  <div class="card-body p-4">
+                    <h6 class="card-title fw-bold">Card title</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                    <div class="text-warning fs-5">★★★</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card bg-secondary text-white border-0 h-100">
+                  <img src="assets/tech3.webp" class="card-img-top" alt="">
+                  <div class="card-body p-4">
+                    <h6 class="card-title fw-bold">Card title</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                    <div class="text-warning fs-5">★★★</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testiCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testiCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container py-5">
+      <h2 class="text-center fw-bold display-5 mb-5">Tips and Tricks From Our Expert</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 shadow border-0">
+            <img src="assets/tech4.webp" class="card-img-top" alt="">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between text-muted small mb-3"><span><i class="bi bi-eye"></i>
+                  280</span><span>Feb 21, 2025</span></div>
+              <h6 class="card-title fw-bold mb-3">Card title</h6>
+              <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+              <a href="#" class="btn btn-dark rounded-pill px-4">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 shadow border-0">
+            <img src="assets/tech5.webp" class="card-img-top" alt="">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between text-muted small mb-3"><span><i class="bi bi-eye"></i>
+                  580</span><span>Feb 21, 2025</span></div>
+              <h6 class="card-title fw-bold mb-3">Card title</h6>
+              <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+              <a href="#" class="btn btn-dark rounded-pill px-4">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 shadow border-0">
+            <img src="assets/tech6.webp" class="card-img-top" alt="">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between text-muted small mb-3"><span><i class="bi bi-eye"></i>
+                  580</span><span>Feb 21, 2025</span></div>
+              <h6 class="card-title fw-bold mb-3">Card title</h6>
+              <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+              <a href="#" class="btn btn-dark rounded-pill px-4">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+ 
+        <section class="contact-section">
+          <div class="container-fluid">
+            <div class="custom-shape-divider-top-1782541659">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+
+            <div class="col-lg-6">
+
+              <h2 class="contact-heading">
+
+                Contact Us
+
+              </h2>
+
+              <div class="heading-line"></div>
+
+
+              <form>
+
+                <div class="row">
+
+                  <div class="col-md-5 mb-3">
+
+                    <label>First Name</label>
+
+                    <input type="text" class="form-control">
+
+                  </div>
+
+
+                  <div class="col-md-5 mb-3">
+
+                    <label>Last Name</label>
+
+                    <input type="text" class="form-control">
+
+                  </div>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                  <label>Email Address</label>
+
+                  <input type="email" class="form-control">
+
+                </div>
+
+
+                <div class="mb-4">
+
+                  <label>Message</label>
+
+                  <textarea rows="5" class="form-control">
+
+</textarea>
+
+                </div>
+
+
+                <button class="btn btn-primary submit-btn">
+
+                  Submit
+
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+
+
+         
+        </section>
+
+      </div>
+
+      <!-- =========================== 
+          FOOTER
+ ============================  -->
+
+      <footer class="footer">
+
+        <div class="container-fluid ">
+         
+          <div class="container bg-black">
+            <div class="row contact-icons text-center">
+
+            <div class="col-md-3 ms-3">
+
+              <img src="/assets/call.gif" class="icon-img">
+
+              <p>
+
+                (+92) 300-1234567
+
+              </p>
+            </div>
+
+            <div class="col-md-3 ms-3">
+              <img src="/assets/mail.png" class="icon-img">
+              <p>
+                support@fanofan.com
+
+              </p>
+            </div>
+
+            <div class="col-md-3 ms-3">
+
+              <img src="/assets/map.png" class="icon-img">
+
+              <p>
+
+                Karachi Pakistan
+
+              </p>
+
+            </div>
+
+          </div>
+          </div>
+           
+
+          <div class="row gy-4">
+
+            <div class="col-lg-2 col-md-6">
+
+              <h5>
+
+                Home
+
+              </h5>
+
+              <ul>
+
+                <li><a href="#">Overview</a></li>
+
+                <li><a href="#">Features</a></li>
+
+                <li><a href="#">Pricing</a></li>
+
+                <li><a href="#">Updates</a></li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-6">
+
+              <h5>
+
+                About
+
+              </h5>
+
+              <ul>
+
+                <li><a href="#">Story</a></li>
+
+                <li><a href="#">Mission</a></li>
+
+                <li><a href="#">Vision</a></li>
+
+                <li><a href="#">Careers</a></li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-6">
+
+              <h5>
+
+                Support
+
+              </h5>
+
+              <ul>
+
+                <li><a href="#">FAQ</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+                <li><a href="#">Terms</a></li>
+
+                <li><a href="#">Privacy</a></li>
+
+              </ul>
+
+            </div>
+
+            <div class="col-lg-5 footer-col subscribe mb-4">
+              <h6>Subscribe</h6>
+              <p style="font-size: 13px; color: #888; margin-bottom: 12px;">Get for latest news & updates</p>
+              <form class="d-flex gap-2">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <button class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
+
+
+
+          </div>
+
+          <hr>
+
+          <div class="footer-bottom">
+
+            <p>
+
+              Copyright © 2025 FANoFAN |
+
+              Designed by
+
+              <span>
+
+                Rameen Rizwan
+
+              </span>
+
+            </p>
+
+            <div class="social-icons">
+
+              <a href="#">
+
+                <i class="bi bi-facebook"></i>
+
+              </a>
+
+              <a href="#">
+
+                <i class="bi bi-instagram"></i>
+
+              </a>
+
+              <a href="#">
+
+                <i class="bi bi-twitter-x"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
